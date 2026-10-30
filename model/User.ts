@@ -4,8 +4,14 @@ export type User = {
   email: string;
 };
 
-export type DbUser = User & {
-  password_hash: string;
+export type LoginRequest = {
+  username: string;
+  password: string;
+}
+
+export type LoginResponse = {
+  success: boolean;
+  user: User;
 }
 
 export const visitor: User = {
