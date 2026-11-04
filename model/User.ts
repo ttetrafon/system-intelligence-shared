@@ -2,7 +2,7 @@ export type User = {
   id: number;
   username: string;
   email: string;
-};
+}
 
 export type LoginRequest = {
   username: string;
@@ -14,8 +14,12 @@ export type LoginResponse = {
   user: User;
 }
 
+export type LogoutResponse = {
+  success: boolean
+}
+
 export const visitor: User = {
   id: 99,
   username: 'Visitor',
   email: "",
-};
+}
