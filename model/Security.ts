@@ -18,3 +18,9 @@ export type SessionRow = {
 export type VerifyResult =
   | { ok: true }
   | { ok: false; reason: "unknown_session" | "key_mismatch" | "expired" | "replay" };
+
+export type AccessToken = {
+  access_token: string;
+  token_type: string;
+  expires_in: number;
+}

@@ -1,3 +1,5 @@
+import { AccessToken } from "./Security";
+
 export type User = {
   id: number;
   username: string;
@@ -12,6 +14,7 @@ export type LoginRequest = {
 export type LoginResponse = {
   success: boolean;
   user: User;
+  token: AccessToken
 }
 
 export type LogoutResponse = {
