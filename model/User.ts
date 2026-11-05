@@ -9,6 +9,8 @@ export type User = {
 export type LoginRequest = {
   username: string;
   password: string;
+  client: 'native' | 'web';
+  deviceLabel?: string
 }
 
 export type LoginResponse = {
