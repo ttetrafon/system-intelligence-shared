@@ -1,8 +1,10 @@
-export type CreateSessionResult = { sid: string; refreshToken: string };
+export type CreateSessionResult =
+  | { ok: true; sid: string; refreshToken: string }
+  | { ok: false; reason: "replay" };
 
 export type RefreshResult =
   | { ok: true; sid: string; refreshToken: string }
-  | { ok: false; reason: "unknown_session" | "key_mismatch" | "expired" | "invalid_token" | "reuse_detected" };
+  | { ok: false; reason: "unknown_session" | "key_mismatch" | "expired" | "invalid_token" | "reuse_detected" | "replay" };
 
 export type SessionRow = {
   sid: string;
